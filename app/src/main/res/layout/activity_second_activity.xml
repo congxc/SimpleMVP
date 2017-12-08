@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rainshieh.simplemvp.ui.widget.ResideLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/left"
+        android:orientation="vertical"
+        android:background="#E91E63"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/top_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:layout_width="80dp"
+                 android:layout_height="80dp"
+                 android:layout_marginLeft="25dp"
+                 android:layout_marginTop="55dp"
+                 app:cardElevation="0dp"
+                app:cardCornerRadius="40dp">
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="TITLE"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_menu"
+            android:layout_below="@+id/top_menu">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/MenuStyle"
+                    android:text="MENU_1" />
+
+                <TextView
+                    style="@style/MenuStyle"
+                    android:text="MENU_2" />
+
+                <TextView
+                    style="@style/MenuStyle"
+                    android:text="MENU_3" />
+
+                <TextView
+                    style="@style/MenuStyle"
+                    android:text="MENU_4" />
+
+                <TextView
+                    style="@style/MenuStyle"
+                    android:text="MENU_5" />
+
+                <TextView
+                    android:id="@+id/tv_setting"
+                    style="@style/MenuStyle"
+                    android:text="MENU_6" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottom_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:padding="12dp"
+                android:text="关于"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:padding="12dp"
+                android:text="主题"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:background="#f1e912"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </FrameLayout>
+
+
+</com.rainshieh.simplemvp.ui.widget.ResideLayout>

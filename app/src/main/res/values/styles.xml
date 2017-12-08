@@ -1,0 +1,70 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="android:windowActionBar">false</item>-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:configChanges">keyboardHidden|orientation</item>
+        <item name="android:launchMode">singleTask</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:actionBarStyle">@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse</item>
+        <item name="actionBarWidgetTheme">@android:style/Theme.Holo</item>
+        <!--<item name="actionDropDownStyle">@android:style/Widget.Holo.Spinner.DropDown.ActionBar</item>-->
+        <item name="actionButtonStyle">@android:style/Widget.Holo.ActionButton</item>
+        <item name="actionOverflowButtonStyle">@android:style/Widget.Holo.ActionButton.Overflow</item>
+        <item name="actionModeBackground">@color/white</item>
+        <item name="actionMenuTextColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:actionMenuTextAppearance">@style/MenuTextStyle</item>
+        <item name="actionMenuTextAppearance">@style/MenuTextStyle</item>
+        <item name="actionModePopupWindowStyle">@android:style/Widget.Holo.Light.ActionMode</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
+    </style>
+    <!-- toolbar navigation style-->
+    <style name="myToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <!-- toolbar菜单文字尺寸 -->
+    <style name="MenuTextStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- 设置Toolbar标题字体的大小 -->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16dp</item>
+    </style>
+    <!-- toolbar菜单样式 -->
+    <style name="ToolbarTheme" parent="Theme.AppCompat">
+        <item name="titleTextAppearance">@style/Toolbar.TitleText</item><!--标题文字字体大小-->
+        <item name="android:actionMenuTextAppearance">@style/MenuTextStyle</item>
+        <item name="actionMenuTextAppearance">@style/MenuTextStyle</item><!--菜单文字字体大小 此处不管用 要设置到AppTheme中-->
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item> <!--字体大小-->
+        <item name="titleTextColor">@android:color/white</item>
+        <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
+        <item name="actionMenuTextColor">@android:color/black</item>
+    </style>
+    <!-- Toolbar popup主题 -->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+    <style name="MenuStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:layout_marginRight">80dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

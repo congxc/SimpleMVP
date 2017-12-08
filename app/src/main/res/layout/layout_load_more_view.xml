@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/foot_layout"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#11000000">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/loading_view"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_maxi"
+        android:paddingTop="@dimen/padding_maxi">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="@dimen/load_progress_width"
+            android:layout_height="@dimen/load_progress_width"
+            android:layout_centerVertical="false"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@anim/anim_refresh_loading"/>
+
+        <TextView
+            android:layout_toRightOf="@id/progress_bar"
+            android:id="@+id/foot_hint_text"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/loading"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+    <TextView
+        android:visibility="gone"
+        android:paddingBottom="@dimen/padding_maxi"
+        android:paddingTop="@dimen/padding_maxi"
+        android:id="@+id/load_end_view"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/load_end"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="15sp"/>
+    <TextView
+        android:visibility="gone"
+        android:paddingBottom="8dp"
+        android:paddingTop="@dimen/padding_maxi"
+        android:id="@+id/load_failed_view"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/load_failed"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="15sp"/>
+
+</RelativeLayout>
