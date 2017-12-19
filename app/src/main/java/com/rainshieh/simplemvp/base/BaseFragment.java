@@ -83,6 +83,7 @@ public abstract class BaseFragment<P extends BasePresenter, M extends IModel> ex
         super.onViewCreated(view, savedInstanceState);
         init(savedInstanceState);
         initWidget();
+        bindEventListener();
     }
 
     @Override
@@ -158,10 +159,10 @@ public abstract class BaseFragment<P extends BasePresenter, M extends IModel> ex
     public boolean checkSingleClick() {
         if (System.currentTimeMillis() - lastClickTime < 500) {
             lastClickTime = System.currentTimeMillis();
-            return true;
+            return false;
         }
         lastClickTime = System.currentTimeMillis();
-        return false;
+        return true;
     }
 
     @Override
